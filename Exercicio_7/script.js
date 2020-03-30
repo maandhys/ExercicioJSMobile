@@ -1,16 +1,24 @@
 
-function myComputer() {
-    if (navigator.deviceMemory) {
-        document.getElementById("ram").innerText = "Quantidade de memória ram: " + navigator.deviceMemory
+function myIp() {
+  fetch(
+    "https://ipinfo.io/", {
+    headers: {
+      "Accept": "application/json"
     }
-    if (navigator.onLine) {
-        document.getElementById("connection").innerText = "Estado de Conexão: Conectado" 
-    }
-    if (navigator.userAgent) {
-        document.getElementById("user").innerText = "UserAgent: " + navigator.userAgent
-    }
-    if (navigator.language) {
-        document.getElementById("language").innerText = "Linguagem do Navegador: " + navigator.language
-    }
+  }).then(function (response) {
+    response.text()
+      .then(function (result) {
+        var x =  JSON.parse(result);
+          document.getElementById("ip").value = x.ip;
+          document.getElementById("hostname").value = x.hostname;
+          document.getElementById("city").value = x.city;
+          document.getElementById("region").value = x.region;
+          document.getElementById("country").value = x.country;
+          document.getElementById("loc").value = x.loc;
+          document.getElementById("org").value = x.org;
+          document.getElementById("postal").value = x.postal;
+          document.getElementById("timezone").value = x.timezone;
+        })
+  }).catch(error => console.error(error))
 }
-window.onload = setTimeout(myComputer, 1000)
+window.onload = myIp()
