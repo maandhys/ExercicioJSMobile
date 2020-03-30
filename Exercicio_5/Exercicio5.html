@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<script src='script.js'></script>
+</head>
+
+<body>
+	<p>
+		<label>Cadastro de Universidade</label>
+	</p>
+	<div id="form">
+		<div>
+			<label for="name"> Nome: </label>
+			<input type="text" id="name">
+		</div><br />
+		<div>
+			<label for="creationDate"> Data de Fundação: </label>
+			<input type="date" id="creationDate">
+		</div><br />
+		<div>
+			<label for="numberCampus"> Quantidade de Campos: </label>
+			<input type="text" id="numberCampus">
+		</div><br />
+		<div>
+			<label for="numberStudent"> Quantidade de Alunos: </label>
+			<input type="text" id="numberStudent">
+		</div><br />
+		<div>
+			<label for="numberTeachers"> Quantidade de Professores: </label>
+			<input type="text" id="numberTeachers">
+		</div><br />
+		<div>
+			<label for="numberCouser"> Quantidade de Cursos: </label>
+			<input type="text" id="numberCouser">
+		</div><br />
+		<div>
+			<label for="mec"> Melhor curso do MEC: </label>
+			<input type="text" id="mec">
+		</div> <br />
+
+		<div>
+			<button type="text" onclick="save()"> Salvar
+		</div>
+
+	</div>
+	</div>
+</body>
+
+</html>
+
+<!-- 
+	Você deverá uma página criando um formulário para armazenar os dados de uma
+Universidade. Os dados serão nome, data de fundação, quantidade de campus,
+quantidade de alunos, quantidade de professores, quantidade cursos, melhor curso
+no MEC. Estes dados deverão ser armazenados no localStorage mas utilizando o
+formato de objeto. Os dados deverão ser recarregados na página e exibidos no
+console no formato objeto. Dica * Utilizar JSON Parse e JSON Stringify.
+	-->
